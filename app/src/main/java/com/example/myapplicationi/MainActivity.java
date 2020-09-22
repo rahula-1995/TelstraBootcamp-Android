@@ -2,24 +2,44 @@ package com.example.myapplicationi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "logging";
     EditText nameedit;
+    Button button;
+    boolean check;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
          nameedit = findViewById(R.id.editTextTextPersonName);
+        button =findViewById(R.id.button3);
+        button.requestFocus();
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.showSoftInput(button, InputMethodManager.SHOW_IMPLICIT);
+
+
+    }
+    public void changecolor(View view){
+
+        button =findViewById(R.id.button3);
+        button.setBackgroundColor(Color.RED);
+
+
+
     }
 
     public void ClickListener(View view) {
