@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">मेरा आवेदन</string>
+    <string name="email_id">ईमेल आईडी</string>
+    <string name="password">कुंजिका</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="register">रजिस्टर करें</string>
+</resources>
