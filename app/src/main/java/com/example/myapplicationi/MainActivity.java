@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = preferences.edit();
 
         editor.putString(KEYNAME,name);
-        
+
         editor.commit();
     }
 

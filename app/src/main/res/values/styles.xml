@@ -7,4 +7,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="myfonts"   parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">#abc654</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="myfonts.red">
+        <item name="android:textColor">#ff6677</item>
+
+    </style>
+
 </resources>
