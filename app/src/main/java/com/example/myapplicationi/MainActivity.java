@@ -97,15 +97,14 @@ public class MainActivity extends AppCompatActivity {
         restoreData();
     }
     private void restoreData() {
-        //open the file
+
         SharedPreferences preferences = getSharedPreferences(SHAREDPREFS,MODE_PRIVATE);
 
-        //read the file
+
         String name = preferences.getString(KEYNAME,"");
-        //String pwd = preferences.getString(KEYPWD,"");
-        //restore the datq in edittexts
+
         nameedit.setText(name);
-        //pwdEditText.setText(pwd);
+
     }
 
     @Override
@@ -114,18 +113,15 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG,"mainactivity pause");
         saveData();
     }
-    private void saveData() {///test case --onpause --if data is saved successfully then i should be able to open the file and see the data stored in that file
-        //get the data from edittexts
+    private void saveData() {
         String name = nameedit.getText().toString();
-        //String pwd = pwdEditText.getText().toString();
-        //create a file sharedprefs
+
         SharedPreferences preferences = getSharedPreferences(SHAREDPREFS,MODE_PRIVATE);
-        //open that file
+
         SharedPreferences.Editor editor = preferences.edit();
-        //write to file
+
         editor.putString(KEYNAME,name);
-        //editor.putString(KEYPWD,pwd);
-        //save the file
+        
         editor.commit();
     }
 
